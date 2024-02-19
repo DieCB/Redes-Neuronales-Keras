@@ -30,10 +30,11 @@ model = Sequential()
 
 model.add(Dense(100, batch_input_shape=(None, 784)))
 model.add(Activation('sigmoid'))
-model.add(Dense(50))
-model.add(Activation('sigmoid'))
-model.add(Dense(10))
-model.add(Activation('softmax'))
+model.add(Dense(500, activation='sigmoid'))
+model.add(Dense(500, activation='relu'))
+model.add(Dense(100, activation='exponential'))
+model.add(Dense(10, activation='softmax'))
+
 
 model.compile(loss='categorical_crossentropy', optimizer='adam',metrics=['accuracy'])
 
